@@ -1,0 +1,188 @@
+body {
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.563;
+  padding: 0;
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+}
+
+header {
+  margin: 10px;
+}
+
+.centered {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnav_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  text-align: center;
+  gap: 1em;
+}
+
+.productlist main,
+.category_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.discounted > p {
+  margin-bottom: 0;
+}
+.productlist article.onSale .price span {
+  display: initial;
+}
+.productlist article button {
+  margin-top: auto;
+}
+.productlist article {
+  margin-bottom: 1rem;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+.purchaseBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--color);
+  padding: 1rem;
+  justify-items: center;
+}
+
+.purchaseBox form label {
+  gap: 1rem;
+}
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  height: 50%;
+}
+
+.info {
+  padding: 1rem;
+}
+.products select {
+  min-width: 100px;
+}
+.products main {
+  display: grid;
+  justify-items: center;
+}
+.products main .breadcrumbs {
+  grid-column: 1/-1;
+}
+
+.products dt,
+.products dd,
+.products p,
+.products h2,
+.productlist h2,
+.productlist h3,
+.productlist h4,
+.productlist p,
+.productlist a {
+  text-align: center;
+}
+
+.productlist img {
+  width: 100%;
+  height: 250px;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    height: 710lvw;
+  }
+
+  .productlist main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .category_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1em;
+  }
+
+  .title h1 {
+    display: none;
+  }
+
+  .products main img {
+    width: 100%;
+    height: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 1em;
+  }
+
+  .productlist img {
+    width: 100%;
+    height: 450px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .centered h1 {
+    font-size: 120px;
+  }
+
+  dt,
+  dd,
+  p,
+  h3,
+  h4,
+  a,
+  h2,
+  .text h2,
+  .category main h2 {
+    color: var(--color);
+    text-align: center;
+  }
+
+  .productlist article.onSale .discounted {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .container img {
+    width: 100%;
+    height: 600px;
+  }
+}
