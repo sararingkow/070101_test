@@ -17,9 +17,16 @@ function showProductList(product) {
   copy.querySelector(".articletype").textContent = product.articletype;
   copy.querySelector(".productname").textContent = product.brandname;
   copy.querySelector(".price").textContent = "DKK " + product.price + ",-";
+  copy.querySelector(".discount_price").classList.add("hide");
 
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
+  }
+
+  if (product.discount) {
+    copy.querySelector(".discount_percentage").classList.remove("hide");
+    copy.querySelector(".discount_percentage").textContent = product.discount + "%";
+    copy.querySelector(".discount_price").classList.remove("hide");
   }
 
   document.querySelector("main").appendChild(copy);
