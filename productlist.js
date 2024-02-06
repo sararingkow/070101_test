@@ -19,7 +19,7 @@ function showProductList(product) {
   copy.querySelector(".price").textContent = "DKK " + product.price + ",-";
 
   if (product.soldout) {
-    document.querySelector("article").classList.add("soldOut");
+    copy.querySelector("article").classList.add("soldOut");
   }
 
   document.querySelector("main").appendChild(copy);
