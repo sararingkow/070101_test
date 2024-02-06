@@ -50,7 +50,6 @@ h2 {
 
 .topnav_btn a:hover {
   color: #919191;
-  padding: 14px 16px;
 }
 
 h1 {
@@ -152,7 +151,15 @@ footer a {
 
 .discounted p:last-child {
   background: red;
-  padding: 0.2rem;
+  width: 50px;
+}
+
+.read-more {
+  color: lightgray;
+}
+
+.read-more:hover {
+  color: #ffffff;
 }
 
 /*Product*/
