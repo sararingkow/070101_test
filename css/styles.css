@@ -199,3 +199,18 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-top: 5rem;
 }
+
+.hide {
+  display: none;
+}
+
+.discounted_price {
+  position: absolute;
+  top: 50%;
+  background-color: rgb(255, 0, 0);
+  width: 80%;
+  padding: 1rem;
+  text-align: center;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}

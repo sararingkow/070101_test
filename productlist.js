@@ -28,5 +28,10 @@ function showProduct(product) {
     copy.querySelector("article").classList.add("soldOut");
   }
 
+  if (product.discount) {
+    copy.querySelector("p.discounted_price").classList.remove("hide");
+    copy.querySelector(".beer_article").classList.add("twist");
+  }
+
   document.querySelector("main").appendChild(copy);
 }
