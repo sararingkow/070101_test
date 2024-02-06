@@ -66,10 +66,6 @@ header {
   margin-bottom: 1rem;
 }
 
-.breadcrumbs {
-  display: none;
-}
-
 .purchaseBox {
   display: grid;
   grid-template-columns: 1fr;
