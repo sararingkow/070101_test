@@ -1,8 +1,13 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=10")
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const url = `https://kea-alt-del.dk/t7/api/products?id=${id}`;
+
+fetch(url)
   .then((response) => response.json())
   .then(showProductLists);
 
 function showProductLists(products) {
+  console.log(products); // Add this line
   products.forEach(showProductList);
 }
 
@@ -41,6 +46,8 @@ function showProductList(product) {
       oldPriceElement.parentNode.removeChild(oldPriceElement);
     }
   }
+
+  copy.querySelector(".read-more").setAttribute("href", `products.html?id=${product.id}`);
 
   document.querySelector("main").appendChild(copy);
 }
