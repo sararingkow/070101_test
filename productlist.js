@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
-const url = `https://kea-alt-del.dk/t7/api/products?id=${id}`;
+const category = urlParams.get("category");
+const url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
 
 fetch(url)
   .then((response) => response.json())
