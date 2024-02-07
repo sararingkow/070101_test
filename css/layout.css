@@ -44,10 +44,6 @@ header {
   gap: 2rem;
 }
 
-.productlist article .discounted,
-.productlist article .price span {
-  display: none;
-}
 .productlist article.onSale .discounted {
   display: flex;
   justify-content: center;
